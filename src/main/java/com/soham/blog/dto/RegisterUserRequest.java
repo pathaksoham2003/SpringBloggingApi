@@ -9,6 +9,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+import java.util.List;
+
 @Setter
 @Getter
 @NoArgsConstructor
@@ -20,7 +22,7 @@ public class RegisterUserRequest {
     @NotNull(message = "Password required parameter.")
     private String password;
     @NotNull(message = "Role required parameter.")
-    private Integer role;
+    private List<String> role;
     @Override
     public String toString() {
         return "RegisterUserRequest{" +
